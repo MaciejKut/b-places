@@ -3,14 +3,16 @@
 }
 
 .main-carousel {
-    width: 100vw;
-    height: 50vh;
+    width: 100%;
+    height: auto;
+    min-height: 400px;
     min-height: 250px;
     margin: 0 auto;
 
     .carousel-cell {
         width: 50%;
-        height: 250px;
+        height: 360px;
+        ;
         margin-right: 10px;
         border-radius: 5px;
         background-position: center center;
@@ -34,7 +36,7 @@
             align-self: auto;
             color: #FAFAFA;
             text-transform: uppercase;
-            background-color: rgba(0, 0, 0, 0.44);
+            background-color: rgba(0, 0, 0, 0.22);
             padding: 20px;
             border-radius: 5px;
         }
@@ -60,4 +62,11 @@
     color: white;
     right: 10px;
     top: 10px;
+}
+
+.startOver {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: yellow;
+
 }
