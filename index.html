@@ -65,14 +65,20 @@ image: "<p>Lorem ipsum.</p> <img src='images/boko-haram.jpg' alt='Photo placehol
 
     </div>
     <div class="progress-bar"></div>
-
-
+    <p>
+        <button id="center-map">Center map</button>
+        <button id="center-smooth">Center smoothly</button>
+    </p>
+    <p id="infos"></p>
+    <div id="map"></div>
 
 
     <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="vendor/hash.js"></script>
     <script src="vendor/mustache.js"></script>
     <script src="js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5ly03IdDjKGyh6VUCnnzGfKwQ0t2xAyY&callback=initMap">
+    </script>
 
 
 </body>

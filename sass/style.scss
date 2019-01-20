@@ -2,66 +2,86 @@
     box-sizing: border-box;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 body {
     font-family: sans-serif;
 }
 
 .main-carousel {
     background: #FAFAFA;
+
+    .carousel-cell {
+        width: 66%;
+        height: 400px;
+        margin-right: 10px;
+        background: #333;
+    }
+
+    img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+
+    }
+
+    h2 {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        color: #FAFAFA;
+        text-transform: uppercase;
+        background-color: rgba(0, 0, 0, 0.22);
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    p:nth-of-type(1) {
+        position: absolute;
+        bottom: 80px;
+        left: 10px;
+        color: #FAFAFA;
+        text-transform: uppercase;
+        background-color: rgba(0, 0, 0, 0.22);
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    p:nth-of-type(2) {
+        position: absolute;
+        bottom: 5px;
+        left: 10px;
+        color: #FAFAFA;
+        text-transform: uppercase;
+        background-color: rgba(0, 0, 0, 0.22);
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .flickity-page-dots {
+        bottom: -40px;
+    }
+
+    .static-banner {
+        position: absolute;
+        background: hsla(0, 0%, 0%, 0.3);
+        z-index: 1;
+        padding: 2px 20px;
+        font-size: 26px;
+        color: white;
+        pointer-events: none;
+    }
+
+    .static-banner1 {
+        left: 10px;
+        top: 10px;
+    }
+
+    .static-banner2 {
+        right: 10px;
+        bottom: 10px;
+    }
+
 }
-
-.carousel-cell {
-    width: 66%;
-    height: 400px;
-    margin-right: 10px;
-    background: #333;
-}
-
-img {
-    display: block;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-
-}
-
-h2 {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    color: #FAFAFA;
-    text-transform: uppercase;
-    background-color: rgba(0, 0, 0, 0.22);
-    padding: 20px;
-    border-radius: 5px;
-}
-
-p:nth-of-type(1) {
-    position: absolute;
-    bottom: 80px;
-    left: 10px;
-    color: #FAFAFA;
-    text-transform: uppercase;
-    background-color: rgba(0, 0, 0, 0.22);
-    padding: 20px;
-    border-radius: 5px;
-}
-
-p:nth-of-type(2) {
-    position: absolute;
-    bottom: 5px;
-    left: 10px;
-    color: #FAFAFA;
-    text-transform: uppercase;
-    background-color: rgba(0, 0, 0, 0.22);
-    padding: 20px;
-    border-radius: 5px;
-}
-
 
 .progress-bar {
     height: 20px;
@@ -69,28 +89,9 @@ p:nth-of-type(2) {
     background: #333;
 }
 
-.flickity-page-dots {
-    bottom: -40px;
-}
-
-
-
-.static-banner {
-    position: absolute;
-    background: hsla(0, 0%, 0%, 0.3);
-    z-index: 1;
-    padding: 2px 20px;
-    font-size: 26px;
-    color: white;
-    pointer-events: none;
-}
-
-.static-banner1 {
-    left: 10px;
-    top: 10px;
-}
-
-.static-banner2 {
-    right: 10px;
-    bottom: 10px;
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 50%;
+    /* The width is the width of the web page */
 }
