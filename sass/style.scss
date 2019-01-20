@@ -8,26 +8,29 @@ body {
 
 .main-carousel {
     background: #FAFAFA;
+    height: 50vh;
 
     .carousel-cell {
         width: 66%;
-        height: 400px;
+        height: 50vh;
         margin-right: 10px;
         background: #333;
     }
 
     img {
         display: block;
-        height: 100%;
-        width: 100%;
+        width: auto;
+        height: 50vh;
+        margin: 0 auto;
         object-fit: cover;
 
     }
 
     h2 {
         position: absolute;
-        top: 0;
+        top: 20px;
         left: 50%;
+        transform: translate(-50%, -50%);
         color: #FAFAFA;
         text-transform: uppercase;
         background-color: rgba(0, 0, 0, 0.22);
@@ -86,12 +89,18 @@ body {
 .progress-bar {
     height: 20px;
     width: 0;
-    background: #333;
+    background: rgb(164, 226, 223);
 }
 
 #map {
-    height: 400px;
+    height: 50vh;
     /* The height is 400 pixels */
-    width: 50%;
+    width: 100%;
     /* The width is the width of the web page */
+    margin: 0 auto;
+}
+
+.pageWrapper {
+    width: 80%;
+    margin: 0 auto;
 }

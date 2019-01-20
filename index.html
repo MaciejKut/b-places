@@ -16,40 +16,44 @@
 
     <script>
         var slidesData = [{
-                title: 'Title1',
+                id: '0',
+                title: 'Boko Haram insurgency',
                 description: 'Description 1',
-image: "<p>Lorem ipsum.</p> <img src='images/boko-haram.jpg' alt='Photo placeholder'> <p> Dolor sit. </p>"
+                image: "<p>deaths</p> <img src='images/boko-haram.jpg' alt='Photo placeholder'> <p>51 567+</p>",
+coords: {lat: 9.052978, lng: 7.507485}
             },
             {
-                title: 'Title2',
+                id: '1',
+                title: 'Ethnic violence in South Sudan',
                 description: 'Description2',
-                image: "<p>Lorem ipsum.</p> <img src='images/graves.jpg' alt='Photo placeholder'> <p> Dolor sit. </p>"
-
+                image: "<p>deaths</p> <img src='images/graves.jpg' alt='Photo placeholder'> <p>400 000+</p>",
+                coords: {lat: 7.7660983, lng: 20.6491937}
             },
             {
-                title: 'Title3',
+                id: '2',
+                title: 'Syrian Civil War',
                 description: 'Description2',
-                image: "<p>Lorem ipsum.</p> <img src='images/insurection-in-maghreb.jpeg' alt='Photo placeholder'> <p> Dolor sit. </p>"
-
+                image: "<p>deaths</p> <img src='images/4.jpg' alt='Photo placeholder'> <p>560 000+</p>",
+                coords: {lat: 26.2900714, lng: 12.8374898}
             },
             {
-                title: 'Title4',
+                id: '3',
+                title: 'Somali Civil War',
                 description: 'Description2',
-                image: "<p>Lorem ipsum.</p> <img src='images/mali.jpg' alt='Photo placeholder'> <p> Dolor sit. </p>"
-
+                image: "<p>deaths</p> <img src='images/mali.jpg' alt='Photo placeholder'> <p>500 000+</p>",
+                coords: {lat: 5.2310428, lng: 41.8080074}
             },
             {
-                title: 'Title5',
+                id: '4',
+                title: 'Libyan Civil War',
                 description: 'Description2',
-                image: "<p>Lorem ipsum.</p> <img src='images/refuges.jpg' alt='Photo placeholder'> <p> Dolor sit. </p>"
-
+                image: "<p>deaths</p> <img src='images/refuges.jpg' alt='Photo placeholder'> <p>42 253+</p>",
+                coords: {lat: 26.0774984, lng: 8.3088008}
             }
         ]
     </script>
-    <h1>War = Evil</h1>
-
     <script id="template-slide-list" type="x-tmpl-mustache">
-        <div class="carousel-cell" >
+        <div class="carousel-cell" id="{{ id }}" >
             <div class="container">
                 <h2>{{ title }}</h2>
                 <div class="static-banner static-banner2">{{{ description }}}</div>
@@ -58,20 +62,18 @@ image: "<p>Lorem ipsum.</p> <img src='images/boko-haram.jpg' alt='Photo placehol
         </div>
     </script>
 
+    <div class="pageWrapper">
 
-    <div class="main-carousel" id="slidesContainer">
+        <div class="main-carousel" id="slidesContainer">
 
-        <!-- slides goes here -->
+            <!-- slides goes here -->
+
+        </div>
+        <div class="progress-bar"></div>
+
+        <div id="map"></div>
 
     </div>
-    <div class="progress-bar"></div>
-    <p>
-        <button id="center-map">Center map</button>
-        <button id="center-smooth">Center smoothly</button>
-    </p>
-    <p id="infos"></p>
-    <div id="map"></div>
-
 
     <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="vendor/hash.js"></script>
