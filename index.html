@@ -15,32 +15,32 @@
 <body>
 
     <script>
-        var productsData = [{
-                title: 'Football',
+        var slidesData = [{
+                title: 'Title1',
                 description: 'Description 1',
-                image: "<p>Lorem ipsum.</p> <img src='images/boko-haram.jpg' alt='Photo placeholder'> <p> Dolor sit. </p>"
+image: "<p>Lorem ipsum.</p> <img src='images/boko-haram.jpg' alt='Photo placeholder'> <p> Dolor sit. </p>"
             },
             {
-                name: 'Description2',
-                description: '$8',
+                title: 'Title2',
+                description: 'Description2',
                 image: "<p>Lorem ipsum.</p> <img src='images/graves.jpg' alt='Photo placeholder'> <p> Dolor sit. </p>"
 
             },
             {
-                name: 'Description2',
-                description: '$8',
+                title: 'Title3',
+                description: 'Description2',
                 image: "<p>Lorem ipsum.</p> <img src='images/insurection-in-maghreb.jpeg' alt='Photo placeholder'> <p> Dolor sit. </p>"
 
             },
             {
-                name: 'Description2',
-                description: '$8',
+                title: 'Title4',
+                description: 'Description2',
                 image: "<p>Lorem ipsum.</p> <img src='images/mali.jpg' alt='Photo placeholder'> <p> Dolor sit. </p>"
 
             },
             {
-                name: 'Description2',
-                description: '$8',
+                title: 'Title5',
+                description: 'Description2',
                 image: "<p>Lorem ipsum.</p> <img src='images/refuges.jpg' alt='Photo placeholder'> <p> Dolor sit. </p>"
 
             }
@@ -48,32 +48,26 @@
     </script>
     <h1>War = Evil</h1>
 
-
-
-    <div class="main-carousel">
-        <div class="button-group">
-
-            <a href="#slide1" class="startOver">Start Over</a>
-        </div>
-        <div class="carousel-cell" id="slide4" style="background-image: url('images/4.jpg')">
+    <script id="template-slide-list" type="x-tmpl-mustache">
+        <div class="carousel-cell" >
             <div class="container">
-                <h2>War is always evil.</h2>
+                <h2>{{ title }}</h2>
+                <div class="static-banner static-banner2">{{{ description }}}</div>
+                {{{ image }}}
             </div>
         </div>
+    </script>
+
+
+    <div class="main-carousel" id="slidesContainer">
+
+        <!-- slides goes here -->
+
     </div>
     <div class="progress-bar"></div>
 
 
-    <div class="navi">
-        <p>
-            View:
-            <a href="#slide3">Cell 3</a>,
-            <a href="#slide7">Cell 7</a>,
-            <a href="#slide9">Cell 9</a>,
-            <a href="#slide12">Cell 12</a>,
-        </p>
 
-    </div>
 
     <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="vendor/hash.js"></script>
