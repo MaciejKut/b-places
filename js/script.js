@@ -39,10 +39,17 @@ flkty.on('scroll', function (progress) {
     progress = Math.max(0, Math.min(1, progress));
     progressBar.style.width = progress * 100 + '%';
 });
+
+var previousButton = document.querySelector('.button--previous');
+previousButton.addEventListener('click', function () {
+    flkty.previous();
+});
+var previousWrappedButton = document.querySelector('.button--previous-wrapped');
+previousWrappedButton.addEventListener('click', function () {
+    flkty.previous(true);
+});
+
 // Initialize and add the map
-
-
-
 window.initMap = function () {
     // The location of Uluru
     var uluru = slidesData[0].coords;
@@ -53,18 +60,22 @@ window.initMap = function () {
             center: uluru
         });
 
-    var arrayOfCoords = [];
-
-    for (var i = 0; i < slidesData.length; i++) {
-        arrayOfCoords[i] = slidesData[i].coords;
-    }
-    console.log('tu jest arrayOfCords' + arrayOfCoords);
     var markers = [];
-    for (var i = 0; i < arrayOfCoords.length; i++) {
+    var posId = {};
+    for (let i = 0; i < slidesData.length; i++) {
+        console.log('value of ' + i);
         markers[i] = new google.maps.Marker({
-            position: arrayOfCoords[i],
+            position: slidesData[i].coords,
             map: map
         });
-        console.log(markers[i]);
+        console.log(' markers[i] ' + markers[i]);
+        markers[i].addListener('click', function () {
+            console.log('value of i wewnątrz markers ' + i);
+            console.log('cliknięto w marker' + i);
+            flkty.select(i, false, true);
+        });
+        console.log(' markers[i] ' + markers[i]);
     }
+    console.log('value of i 4th chck' + i);
+
 }
